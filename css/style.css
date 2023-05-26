@@ -7,7 +7,6 @@
 
 body {
   min-height: 100vh;
-  color: #7C6A0A;
   background-color: #FFEFE7;
 }
 
@@ -16,7 +15,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   inline-size: 100%;
-  padding-inline: 2rem;
+  padding-inline: 1.5rem;
   padding-block: 3rem;
 }
 nav .nav-title {
@@ -28,11 +27,56 @@ nav .nav-title:hover {
   text-decoration: underline;
 }
 nav .nav-icons {
-  display: flex;
+  display: none;
   gap: 1.25rem;
 }
-nav .nav-icons .nav-img {
+nav .nav-img {
   display: block;
+}
+@media (min-width: 768px) {
+  nav .nav-icons {
+    display: flex;
+  }
+  nav .menu-burger {
+    display: none;
+  }
+}
+
+article {
+  display: flex;
+  color: #7C6A0A;
+  margin-inline: 2.5rem;
+}
+article .impact-section {
+  width: 60%;
+}
+article .impact-section h1 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-block: 3rem;
+}
+article .impact-section p {
+  font-size: 1.25rem;
+  margin-block-end: 3rem;
+}
+article .impact-section button {
+  width: 12vw;
+  padding: 20px;
+  border-style: none;
+  background-color: #FA9500;
+  border-radius: 35px;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+}
+article .image-section {
+  width: 40%;
+  background-color: #FA9500;
+}
+article .image-section img {
+  height: 100%;
+  width: 20vw;
+  border-radius: 1.5rem;
 }
 
 footer {
