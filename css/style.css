@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   inline-size: 100%;
-  padding-inline: 1.5rem;
+  padding-inline: 3rem;
   padding-block: 3rem;
 }
 nav .nav-title {
@@ -44,8 +44,10 @@ nav .nav-img {
 
 article {
   display: flex;
+  gap: 5rem;
   color: #7C6A0A;
-  margin-inline: 2.5rem;
+  margin-inline: 3rem;
+  padding-block-start: 2rem;
 }
 article .impact-section {
   width: 60%;
@@ -57,7 +59,7 @@ article .impact-section h1 {
 }
 article .impact-section p {
   font-size: 1.25rem;
-  margin-block-end: 3rem;
+  margin-block-end: 5rem;
 }
 article .impact-section button {
   width: 12vw;
@@ -71,12 +73,38 @@ article .impact-section button {
 }
 article .image-section {
   width: 40%;
-  background-color: #FA9500;
 }
 article .image-section img {
-  height: 100%;
-  width: 20vw;
+  display: block;
+  max-height: 500px;
+  width: 100%;
   border-radius: 1.5rem;
+}
+
+.product-section {
+  width: 100%;
+  height: auto;
+  padding: 60px;
+}
+.product-section .healtcare h2 {
+  color: #7C6A0A;
+  padding-bottom: 60px;
+  font-weight: 400;
+  font-size: 2em;
+}
+.product-section .product-card {
+  width: 15vw;
+  height: auto;
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+  padding: 20px;
+  border-radius: 8px;
+}
+.product-section .product-card img {
+  width: 200px;
+  height: 250px;
+  background-size: cover;
+  border-radius: 6px;
 }
 
 footer {
