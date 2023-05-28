@@ -111,11 +111,12 @@ article {
 }
 
 .product-section {
-    width: 100%;
+    width: auto;
     height: auto;
     // background-color: red;
     padding: 60px;
     .healtcare {
+        padding-bottom: 60px;
         h2 {
             color: $primary-text-color;
             padding-bottom: 60px;
@@ -123,19 +124,60 @@ article {
             font-size: 2em;
         }
     }
-
-    .product-card {
-        width: 15vw;
+    .card-section {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 200px;
+        row-gap: 75px;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
         height: auto;
-        background-color: $secondary-color;
-        color: $primary-text-color;
-        padding: 20px;
-        border-radius: 8px;
-        img{
-            width: 200px;
-            height: 250px;
-            background-size: cover;
-            border-radius: 6px;
+        .product-card {
+            width: 14vw;
+            height: 55vh;
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+            .icon {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 12px;
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    stroke: $primary-text-color
+                }
+            }
+            .product-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                img {
+                    width: 12vw;
+                    height: 30vh;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+    .furniture {
+        @extend .healtcare;
+        .product-card {
+            background-color: $tertiary-color;
+            color: white;
+            .icon {
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    stroke: #FFFF;
+                }
+            }
         }
     }
 }
