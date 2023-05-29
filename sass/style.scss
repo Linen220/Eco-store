@@ -113,6 +113,9 @@ article {
             color: white;
             font-weight: 700;
             font-size: 1em;
+            &:hover {
+                transform: scale(1.1); // Efecto de zoom del boton
+            }
         }
     }
     .image-section {
@@ -199,8 +202,90 @@ article {
     }
 }
 
+.about-us {
+    margin-inline: 3rem;
+    padding-block-start: 2rem;
+    h2 {
+        color: $primary-text-color;
+        font-weight: 400;
+        font-size: 2em;
+        padding-bottom: 60px;
+    }
+    .mision-section {
+        @include flexCenter(row,space-evenly,center);
+        .earth {
+            $text-color:#E86424;
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $text-color;
+            img {
+                object-fit: contain;
+            }
+            p {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+    .innovation {
+        @extend .earth;
+    }
+}
+
+.gallery {
+    margin-inline: 3rem;
+    padding-block-start: 2rem;
+    h2 {
+        color: $primary-text-color;
+        font-weight: 400;
+        font-size: 2em;
+        padding-bottom: 60px;
+    }
+    .gallery-images {
+        @include flexCenter(row,space-between,center);
+        img {
+            width: 28vw;
+            height: 45vh;
+            object-fit: cover;
+            object-position: 5px 35%;
+            border-radius: 16px;
+            &:hover {
+                transform: scale(1.1); // Efecto de zoom de la imagen
+            }
+        }
+    }
+}
+
+.location {
+    $text-color: #E86424;
+    margin-inline: 3rem;
+    padding-block-start: 2rem;
+    padding-block-end: 4rem;
+    color: $text-color;
+    h2 {
+        color: $primary-text-color;
+        font-weight: 400;
+        font-size: 2em;
+        padding-bottom: 60px;
+    }
+    .map {
+        @include flexCenter(row, center ,center);
+        padding-bottom: 50px;
+    }
+}
+
 footer {
     background-color: $quaternary-color;
     width: 100%;
-    height: 250px;
+    height: auto;
+    color: white;
+    padding-inline-start: 3rem;
+    padding-block: 2rem;
+    .social-media {
+        @include flexCenter(row, center, center);
+        gap: 40px;
+    }
 }
