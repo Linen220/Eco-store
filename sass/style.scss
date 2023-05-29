@@ -7,6 +7,21 @@ $quaternary-color: #FA9500;
 
 $font-stack: 'IBM Plex Sans', sans-serif;
 
+// Mixins
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border-style: none;
+    }
+}
+
 // STYLE GENERAL
 * {
     box-sizing: border-box;
@@ -26,9 +41,11 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    @include flexCenter(row,space-between,center);
+
 
     // Define el tamaño horizontal o vertical del bloque de un elemento, 
     // dependiendo de su modo de escritura, en este caso horizontal (ancho)
